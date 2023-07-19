@@ -15,11 +15,11 @@
 #include <sstream>
 #include <vector>
 
-#include "cppcodec/base64_rfc4648.hpp"
-#include "cppcodec/base32_rfc4648.hpp"
-#include "cppcodec/base32_crockford.hpp"
-#include "cppcodec/hex_upper.hpp"
-#include "cppcodec/hex_lower.hpp"
+#include "contrib/cppcodec/base64_rfc4648.hpp"
+#include "contrib/cppcodec/base32_rfc4648.hpp"
+#include "contrib/cppcodec/base32_crockford.hpp"
+#include "contrib/cppcodec/hex_upper.hpp"
+#include "contrib/cppcodec/hex_lower.hpp"
 
 enum class KeyType {
     kPkcs1 = 1,
