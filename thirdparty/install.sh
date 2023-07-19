@@ -1,10 +1,24 @@
 #!/bin/bash
 
-yum install cmake3 -y &&
+yum install cmake3 libunwind-devel -y &&
 
 # asio
 tar xvf asio-1.28.0.tar.gz2 && 
 cd asio-1.28.0 && 
+make -j8 && make install
+
+# gflags
+tar xvf gflags-2.2.2.tar.gz &&
+cd gflags-2.2.2 &&
+mkdir build && cd build &&
+cmake3 -DBUILD_SHARED_LIBS=ON .. &&
+make -j8 && make install
+
+# glog
+tar xvf glog-0.6.0.tar.gz &&
+cd glog-0.6.0 &&
+mkdir build && cd build &&
+cmake3 .. &&
 make -j8 && make install
 
 # protobuf
